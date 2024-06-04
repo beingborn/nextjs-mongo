@@ -8,7 +8,7 @@ export default async function Write() {
       {userInfo ? (
         <div className="p-20 list-tit">
           <h2>WRITE</h2>
-          <p>이러쿵 저러쿵 해주시길 바랍니다.</p>
+          <p>자유롭게 내용을 작성해주세요!</p>
 
           <form className="post-form" action="/api/post/new" method="POST">
             <input name="title" placeholder="글 제목" id="article-tit" />
@@ -25,8 +25,12 @@ export default async function Write() {
           </form> */}
         </div>
       ) : (
-        <div>
-          <h4>글을 쓰려면 로그인 해주세요</h4>
+        <div className="please-login">
+          <div className="404-login" style={{width:"300px", height: "300px"}}>
+            <img src="/404-login.png" style={{width: "100%", height: "100%", objectFit: "cover"}}></img>
+          </div>
+          <h4 style={{fontSize:"20px", marginBottom:"12px"}}>글을 쓰려면 로그인 해주세요</h4>
+          <p>Please log in to write a post</p>
         </div>
       )}
     </div>
