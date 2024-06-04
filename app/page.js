@@ -21,6 +21,24 @@ export default async function Home() {
 
   return (
     <div className="inner">
+      <div className="main-visual">
+        <div className="main-bg">
+          <img src="/main-visual.png"></img>
+        </div>
+        <div className="main-visual-txt">
+          <p>WIDELY</p>
+          <h2>READING</h2>
+        </div>
+        <div className="main-subtxt">
+          <p>KOREA NO.1</p>
+          <p>ARTICLE NEWSLETTER</p>
+        </div>
+        <div className="main-subtxt2">
+          <p>* brocolli</p>
+          <p>세상을 바라보는 눈을 브로콜리하다.</p>
+        </div>
+      </div>
+
       <div className="user-hello">
         <p style={{ color: "gray" }}>{currentDate}</p>
 
@@ -36,6 +54,13 @@ export default async function Home() {
           )}
         </>
       </div>
+      {result.slice(0, 3).map((item, i) => (
+        <div className="list-item" key={i}>
+          <h4>{item.title}</h4>
+          <p>{item.content}</p>
+          <p>{item.author}</p>
+        </div>
+      ))}
     </div>
   );
 }

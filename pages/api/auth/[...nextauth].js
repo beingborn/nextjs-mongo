@@ -13,3 +13,5 @@ export const authOptions = {
   secret: process.env.NEXTAUTH_SECRET,
 };
 export default NextAuth(authOptions);
+
+// 배포 시에 redirect_uri 를 해당 배포 사이트로 바꿔줘야하는 듯

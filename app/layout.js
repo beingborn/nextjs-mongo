@@ -19,45 +19,42 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="header">
-          <Link href="/" className="main-logo">
-            <h1>
-              MIDOO
-              {/* <span className="sub-tit">디지털 리터러시의 혁신</span> */}
-            </h1>
-          </Link>
-          <>
-            {session ? (
-              <div className="user-name">
-                안녕하세요{" "}
-                <span className="user-strong">{session.user.name}</span>님 좋은
-                하루에요!
-                <LogoutBtn></LogoutBtn>
-              </div>
-            ) : (
-              <p>
-                안녕하세요 좋은 하루입니다! 로그인하세요!
-                <LoginBtn></LoginBtn>
-              </p>
-            )}
-          </>
-        </div>
+        <div className="inner">
+          <div className="header">
+            <div className="link-wrap">
+              <Link href="/" className="bottom-gnb">
+                Home
+              </Link>
+              <Link href="/list" className="bottom-gnb">
+                article
+              </Link>
+              <Link href="/write" className="bottom-gnb">
+                write
+              </Link>
+              <Link href="/mypage" className="bottom-gnb">
+                mypage
+              </Link>
+            </div>
+            <div className="right-login">
+              {session ? (
+                <div className="user-name">
+                  안녕하세요{" "}
+                  <span className="user-strong">{session.user.name}</span>님
+                  좋은 하루에요!
+                  <LogoutBtn></LogoutBtn>
+                </div>
+              ) : (
+                <p>
+                  안녕하세요 좋은 하루입니다! 로그인하세요!
+                  <LoginBtn></LoginBtn>
+                </p>
+              )}
+            </div>
+          </div>
 
-        {children}
+          {children}
 
-        <div className="footer">
-          <Link href="/" className="bottom-gnb">
-            홈
-          </Link>
-          <Link href="/list" className="bottom-gnb">
-            리스트
-          </Link>
-          <Link href="/write" className="bottom-gnb">
-            글쓰기
-          </Link>
-          <Link href="/mypage" className="bottom-gnb">
-            마이페이지
-          </Link>
+          <div className="footer"></div>
         </div>
       </body>
     </html>

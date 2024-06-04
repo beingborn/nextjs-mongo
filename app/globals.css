@@ -30,14 +30,13 @@ body {
 
 .bottom-gnb {
   text-decoration: none;
-  margin: 0 20px;
-  background-color: blue;
-  color: white;
+  /* margin: 0 20px; */
+  color: #000;
+  font-weight: 700;
   border-radius: 8px;
   font-size: 13px;
-  flex: 1 1 auto;
+  /* flex: 1 1 auto; */
   text-align: center;
-  padding: 8px 0;
   /* margin: 0px 16px; */
 }
 
@@ -80,9 +79,21 @@ button {
 
 .header {
   padding: 12px 20px;
-  background-color: azure;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+
+.link-wrap {
+  margin-right: auto;
+}
+
+.link-wrap .bottom-gnb {
+  margin: 0 40px;
+}
+
+.right-login {
+  margin-left: auto;
 }
 
 .main-logo {
@@ -114,16 +125,16 @@ button {
   left: 0;
   bottom: 0;
   /* padding: 20px; */
-  border-top: 1px solid blue;
   width: 100%;
-  background-color: aliceblue;
   display: flex;
   justify-content: space-between;
   /* justify-content: space-around; */
 }
 
 .inner {
-  padding: 20px;
+  width: 1440px;
+  margin: 0px auto;
+  border: 1px solid red;
 }
 
 .write-btn {
@@ -156,6 +167,9 @@ button {
 
 .log-btn {
   margin-left: 20px;
+  background-color: #3a4e2b;
+  color: #fff;
+  border-radius: 60px;
 }
 
 .signup-form {
@@ -164,4 +178,66 @@ button {
 
 .signup-form input {
   height: 40px;
+}
+
+/* main page */
+
+.main-visual {
+  height: 100vh;
+  position: relative;
+}
+
+.main-subtxt {
+  position: absolute;
+  left: 0;
+  bottom: 20vh;
+}
+.main-subtxt2 {
+  position: absolute;
+  right: 20px;
+  bottom: 30vh;
+}
+
+.main-subtxt2 p:nth-child(1) {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.main-subtxt2 p:nth-child(2) {
+  font-size: 15px;
+}
+
+.main-bg {
+  width: 500px;
+  height: 500px;
+  /* background: url(/public/main-visual.png) no-repeat; */
+  position: absolute;
+  left: 30%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  /* background-size: cover; */
+}
+
+.main-bg img {
+  width: 100%;
+  height: 100%;
+}
+
+.main-visual-txt {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+}
+
+.main-visual-txt p {
+  font-size: 80px;
+  font-weight: 900;
+}
+
+.main-visual-txt h2 {
+  font-size: 140px;
+  font-weight: 900;
 }
