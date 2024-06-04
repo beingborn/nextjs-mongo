@@ -39,28 +39,19 @@ export default async function Home() {
         </div>
       </div>
 
-      <div className="user-hello">
-        <p style={{ color: "gray" }}>{currentDate}</p>
-
-        <>
-          {session ? (
-            <p className="user-name">
-              안녕하세요{" "}
-              <span className="user-strong">{session.user.name}</span>님 좋은
-              하루에요!
-            </p>
-          ) : (
-            <p>안녕하세요 좋은 하루입니다!</p>
-          )}
-        </>
-      </div>
-      {result.slice(0, 3).map((item, i) => (
-        <div className="list-item" key={i}>
-          <h4>{item.title}</h4>
-          <p>{item.content}</p>
-          <p>{item.author}</p>
+      <div className="main-btm">
+        <div className="user-hello">
+          <p style={{ color: "gray" }}>{currentDate}</p>
+          <h2>TODAY TOP 3 TOPIC</h2>
         </div>
-      ))}
+        {result.slice(0, 3).map((item, i) => (
+          <div className="top-3-list" key={i}>
+            <h4>{item.title}</h4>
+            <p>{item.content}</p>
+            <p>{item.author}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

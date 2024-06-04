@@ -54,7 +54,20 @@ export default async function RootLayout({ children }) {
 
           {children}
 
-          <div className="footer"></div>
+          <div className="footer">
+            <Link href="/" className="">
+              Home
+            </Link>
+            <Link href="/list" className="">
+              article
+            </Link>
+            <Link href="/write" className="">
+              write
+            </Link>
+            <Link href="/mypage" className="">
+              mypage
+            </Link>
+          </div>
         </div>
       </body>
     </html>
