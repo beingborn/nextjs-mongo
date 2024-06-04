@@ -5,9 +5,7 @@
   "homepage": "https://beingborn.github.io/nextmongo",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
-    "predeploy": "npm run build",
-    "deploy": "touch out/.nojekyll && gh-pages -d out --dotfiles",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
