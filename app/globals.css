@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.list-bg {
+  background: rgb(249, 250, 255);
+  padding: 10px;
+}
+.list-item {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 5px;
+  box-shadow: rgb(224, 224, 224) 0px 2px 4px 0px;
+}
+.list-item h4 {
+  font-size: 20px;
+  font-weight: 800;
+  margin: 0;
+}
+.list-item p {
+  color: grey;
+  margin: 5px 0px;
+}
+
+.bottom-gnb {
+  text-decoration: none;
+  margin: 0 20px;
+  background-color: blue;
+  color: white;
+  border-radius: 8px;
+  font-size: 13px;
+  flex: 1 1 auto;
+  text-align: center;
+  padding: 8px 0;
+  /* margin: 0px 16px; */
+}
+
+.p-20 {
+  padding: 20px;
+  border: 1px solid blue;
+}
+input {
+  box-sizing: border-box;
+  padding: 10px;
+  width: 400px;
+  height: 200px;
+  display: block;
+  margin-bottom: 10px;
+}
+button {
+  padding: 10px 15px;
+  background: lightgray;
+  border: none;
+  border-radius: 5px;
+}
+
+.article-change {
+  background-color: purple;
+  color: #fff;
+  /* margin-left: 20px; */
+}
+
+.article-wrap {
+  margin-top: 20px;
+}
+
+.list-detail {
+  text-decoration: none;
+}
+
+.id-value {
+  display: none;
+}
+
+.header {
+  padding: 12px 20px;
+  background-color: azure;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.sub-tit {
+  font-size: 14px;
+  margin-left: 12px;
+}
+
+.delete-btn {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.opacity {
+  opacity: 1;
+}
+
+.detail-wrap {
+  padding: 20px;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  /* padding: 20px; */
+  border-top: 1px solid blue;
+  width: 100%;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: space-between;
+  /* justify-content: space-around; */
+}
+
+.inner {
+  padding: 20px;
+}
+
+.write-btn {
+  background-color: orange;
+  color: #fff;
+  margin: 12px 0px;
+}
+
+.list-item {
+  opacity: 1;
+  display: block;
+  transition: all 1s;
+}
+
+.user-hello {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 5px;
+  box-shadow: rgb(224, 224, 224) 0px 2px 4px 0px;
+}
+
+.user-strong {
+  font-weight: 800;
+}
+
+.user-name {
+  padding-top: 12px;
+}
+
+.log-btn {
+  margin-left: 20px;
+}
+
+.signup-form {
+  margin-top: 40px;
+}
+
+.signup-form input {
+  height: 40px;
+}
