@@ -80,7 +80,7 @@ body {
 .p-20 {
   padding: 20px;
   text-align: center;
-  border: 1px solid blue;
+  padding-top: 60px;
 }
 
 .post-form {
