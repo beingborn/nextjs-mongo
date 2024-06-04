@@ -11,57 +11,66 @@ export default function ListItem({ result }) {
   let currentDate = `${year}년 ${month}월 ${day}일`;
 
   return (
-    <div>
+    <div className="list-page">
+      <div className="list-tit">
+        <h2>Article</h2>
+        <p>좋아요를 누르고 댓글을 작성해보세요! 게시자에게 큰 힘이됩니다 :)</p>
+      </div>
       {result.map((item, i) => (
-        <div className="list-item" key={i}>
-          <h4>{item.title}</h4>
-          <p>{item.content}</p>
-          <p>{item.author}</p>
-          <Link className="list-detail" href={`/detail/${item._id}`}>
-            {item.title} + 더보기
-          </Link>
+        <div className="list-item" id="list-flex" key={i}>
+          <div>
+            <p>{currentDate} 발행</p>
+            <h4>{item.title}</h4>
+            <p>{item.content}</p>
+          </div>
 
-          <Link href={"/correction/" + result[i]._id} className="list-btn">
-            ✏️글 수정
-          </Link>
-          <p>{currentDate} 발행</p>
-          <button
-            className="delete-btn"
-            onClick={(e) => {
-              const deleteOk =
-                window.confirm("정말 게시물을 삭제하시겠습니까?");
+          <div className="item-right">
+            <p>{item.author}</p>
+            <Link className="list-detail" href={`/detail/${item._id}`}>
+              + MORE
+            </Link>
 
-              if (deleteOk) {
-                fetch("/api/post/delete", {
-                  body: {
-                    id: result[i]._id,
-                    author: result[i].author,
-                  },
-                })
-                  .then(() => {
-                    e.target.parentElement.style.opacity = 0;
-                    window.location.reload();
+            <Link href={"/correction/" + result[i]._id} className="list-btn">
+              ✏️CORRECTION
+            </Link>
+            <button
+              className="delete-btn"
+              onClick={(e) => {
+                const deleteOk =
+                  window.confirm("정말 게시물을 삭제하시겠습니까?");
 
-                    setTimeout(() => {
-                      e.target.parentElement.style.display = "none";
-                    }, 500);
+                if (deleteOk) {
+                  fetch("/api/post/delete", {
+                    body: {
+                      id: result[i]._id,
+                      author: result[i].author,
+                    },
                   })
-                  .then((r) => {
-                    if (r.status == 200) {
-                      // 서버 응답 코드가 200
-                      // return r.json();
-                    } else {
-                      console.log("데이터 전송 실패");
-                    }
-                  })
-                  .catch((error) => {
-                    console.log(error);
-                  });
-              }
-            }}
-          >
-            글 삭제
-          </button>
+                    .then(() => {
+                      e.target.parentElement.style.opacity = 0;
+                      window.location.reload();
+
+                      setTimeout(() => {
+                        e.target.parentElement.style.display = "none";
+                      }, 500);
+                    })
+                    .then((r) => {
+                      if (r.status == 200) {
+                        // 서버 응답 코드가 200
+                        // return r.json();
+                      } else {
+                        console.log("데이터 전송 실패");
+                      }
+                    })
+                    .catch((error) => {
+                      console.log(error);
+                    });
+                }
+              }}
+            >
+              DELETE
+            </button>
+          </div>
         </div>
       ))}
     </div>

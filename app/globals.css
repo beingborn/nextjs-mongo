@@ -7,16 +7,49 @@ body {
   width: 100%;
 }
 
-.list-bg {
-  background: rgb(249, 250, 255);
-  padding: 10px;
+.list-tit {
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 80px;
 }
+
+.list-tit h2 {
+  font-size: 80px;
+  font-weight: 900;
+}
+
+#list-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-page {
+  padding-bottom: 120px;
+}
+
+.list-detail {
+  margin-right: 12px;
+}
+
+.delete-btn {
+  color: #fff;
+  background-color: #3a4e2b;
+  font-weight: 700;
+}
+
+.list-btn {
+  margin-right: 20px;
+}
+
 .list-item {
-  background: white;
-  border-radius: 10px;
+  width: 1000px;
+  /* border-radius: 10px; */
+  margin: 0px auto;
   padding: 20px;
   margin-bottom: 5px;
-  box-shadow: rgb(224, 224, 224) 0px 2px 4px 0px;
+  border-bottom: 1px solid black;
+  /* box-shadow: rgb(224, 224, 224) 0px 2px 4px 0px; */
 }
 .list-item h4 {
   font-size: 20px;
@@ -40,11 +73,25 @@ body {
   /* margin: 0px 16px; */
 }
 
+.write-pg {
+  height: 90vh;
+}
+
 .p-20 {
   padding: 20px;
+  text-align: center;
   border: 1px solid blue;
 }
-input {
+
+.post-form {
+  width: 100%;
+  margin-top: 40px;
+  /* display: flex; */
+  /* flex-direction: column; */
+}
+
+.p-20 input {
+  margin: 0px auto;
   box-sizing: border-box;
   padding: 10px;
   width: 400px;
@@ -52,6 +99,12 @@ input {
   display: block;
   margin-bottom: 10px;
 }
+
+#article-tit {
+  height: 40px;
+  margin-bottom: 20px;
+}
+
 button {
   padding: 10px 15px;
   background: lightgray;
@@ -124,18 +177,29 @@ button {
   /* padding: 20px; */
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   /* justify-content: space-around; */
+}
+
+.footer-a {
+  text-decoration: none;
+  color: black;
+  margin-right: 40px;
+}
+
+.footer-copy {
+  margin-left: auto;
 }
 
 .inner {
   width: 1440px;
   margin: 0px auto;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .write-btn {
-  background-color: orange;
+  background-color: #3a4e2b;
+  font-weight: 700;
   color: #fff;
   margin: 12px 0px;
 }
@@ -183,7 +247,7 @@ button {
 
 .main-subtxt {
   position: absolute;
-  left: 0;
+  left: 20px;
   bottom: 20vh;
 }
 .main-subtxt2 {
@@ -237,6 +301,9 @@ button {
 }
 
 .top-3-list {
+  width: 650px;
+  display: flex;
+  align-items: center;
   /* width: 1024px; */
   margin: 0px auto;
   text-align: center;
@@ -244,6 +311,25 @@ button {
   border-bottom: 1px solid black;
 }
 
+.top-3-index {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.top-3-tit {
+  margin-left: 12px;
+  /* border: 1px solid green; */
+  width: 300px;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.top-3-right {
+  margin-left: auto;
+}
+
 .main-btm {
-  padding-bottom: 40px;
+  padding-bottom: 120px;
 }

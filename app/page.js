@@ -23,7 +23,8 @@ export default async function Home() {
     <div className="inner">
       <div className="main-visual">
         <div className="main-bg">
-          <img src="/main-visual.png"></img>
+          {/* <img src="/main-visual.png"></img> */}
+          <img src="/main-visual-2.png"></img>
         </div>
         <div className="main-visual-txt">
           <p>WIDELY</p>
@@ -46,9 +47,12 @@ export default async function Home() {
         </div>
         {result.slice(0, 3).map((item, i) => (
           <div className="top-3-list" key={i}>
-            <h4>{item.title}</h4>
-            <p>{item.content}</p>
-            <p>{item.author}</p>
+            <p className="top-3-index">{i + 1}</p>
+            <h4 className="top-3-tit">{item.title}</h4>
+            <div className="top-3-right">
+              <p>{item.content}</p>
+              <p>{item.author}</p>
+            </div>
           </div>
         ))}
       </div>

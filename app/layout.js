@@ -31,9 +31,9 @@ export default async function RootLayout({ children }) {
               <Link href="/write" className="bottom-gnb">
                 write
               </Link>
-              <Link href="/mypage" className="bottom-gnb">
+              {/* <Link href="/mypage" className="bottom-gnb">
                 mypage
-              </Link>
+              </Link> */}
             </div>
             <div className="right-login">
               {session ? (
@@ -54,20 +54,21 @@ export default async function RootLayout({ children }) {
 
           {children}
 
-          <div className="footer">
-            <Link href="/" className="">
+          {/* <div className="footer">
+            <Link href="/" className="footer-a">
               Home
             </Link>
-            <Link href="/list" className="">
+            <Link href="/list" className="footer-a">
               article
             </Link>
-            <Link href="/write" className="">
+            <Link href="/write" className="footer-a">
               write
             </Link>
-            <Link href="/mypage" className="">
+            <Link href="/mypage" className="footer-a">
               mypage
             </Link>
-          </div>
+            <small className="footer-copy">copyright@2024 deserved</small>
+          </div> */}
         </div>
       </body>
     </html>
