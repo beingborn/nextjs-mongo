@@ -15,6 +15,7 @@ export const metadata = {
 
 export default async function RootLayout({ children }) {
   let session = await getServerSession(authOptions); // 서버 컴포넌트, 서버 기능 안에서 사용
+  console.log(session);
 
   return (
     <html lang="en">
@@ -45,7 +46,9 @@ export default async function RootLayout({ children }) {
                 </div>
               ) : (
                 <p className="flex">
-                  <Link href="/register" className="signup">sign up</Link>
+                  <Link href="/register" className="signup">
+                    sign up
+                  </Link>
                   <LoginBtn></LoginBtn>
                 </p>
               )}

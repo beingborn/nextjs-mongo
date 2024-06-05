@@ -11,6 +11,7 @@
     "export": "next export"
   },
   "dependencies": {
+    "@auth/mongodb-adapter": "^3.2.0",
     "bcrypt": "^5.1.1",
     "gh-pages": "^6.1.1",
     "install": "^0.13.0",
