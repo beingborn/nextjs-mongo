@@ -5,6 +5,9 @@
 body {
   overflow-x: hidden;
   width: 100%;
+  /* background-color: #82D7C0; */
+  background: url(/public/main-visual-2.png);
+  /* cursor: none; */
 }
 
 .please-login {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); text-align: center;}
@@ -34,9 +37,14 @@ body {
   margin-right: 12px;
 }
 
+.list-detail , .list-btn {
+  text-decoration: dashed;
+  color: #000;
+}
+
 .delete-btn {
   color: #fff;
-  background-color: #3a4e2b;
+  background-color: #000;
   font-weight: 700;
 }
 
@@ -215,6 +223,7 @@ button {
 .user-hello {
   margin: 0px auto;
   text-align: center;
+  padding-bottom: 40px;
 }
 
 .user-strong {
@@ -227,7 +236,7 @@ button {
 
 .log-btn {
   margin-left: 20px;
-  background-color: #3a4e2b;
+  background-color: #000;
   color: #fff;
   border-radius: 60px;
 }
@@ -248,6 +257,7 @@ button {
 }
 
 .main-subtxt {
+  /* color: #A3EF97; */
   position: absolute;
   left: 20px;
   bottom: 20vh;
@@ -256,10 +266,11 @@ button {
   position: absolute;
   right: 20px;
   bottom: 30vh;
+  text-align: right;
 }
 
 .main-subtxt2 p:nth-child(1) {
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 700;
 }
 
@@ -288,8 +299,9 @@ button {
   text-align: center;
   position: absolute;
   left: 50%;
-  top: 40%;
+  top: 25%;
   transform: translate(-50%, -50%);
+  /* color: #36418F; */
 }
 
 .main-visual-txt p {
@@ -335,3 +347,182 @@ button {
 .main-btm {
   padding-bottom: 120px;
 }
+
+/* cube */
+
+/* .wrapper {
+  width: 100%;
+  perspective: 800;
+}
+
+.cube {
+  position: relative;
+  top: 160px;
+  margin: 0 auto;
+  height: 200px;
+  width: 200px;
+  animation : spin 12s infinite linear;
+  transform-style: preserve-3d;
+}
+
+@keyframes spin {
+  from { transform: rotateY(0) rotateX(0); }
+  to   { transform: rotateY(-360deg) rotateX(360deg); }
+}
+
+.cube > div {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  border: 1px solid #333;
+  opacity: .8;
+}
+
+.cube > div:hover {
+  opacity: 1;
+  transition: opacity .3s linear;
+}
+
+.one { 
+  transform: rotateX(90deg) translateZ(100px); 
+  background-color: #E3493B;
+}
+
+.two { 
+  transform: translateZ(100px); 
+  background-color: #23B5AF;
+}
+
+.three { 
+  transform: rotateY(90deg) translateZ(100px); 
+  background-color: #E8487F;
+}
+
+.four { 
+  transform: rotateY(180deg) translateZ(100px); 
+  background-color: #28B78D;
+}
+
+.five { 
+  transform: rotateY(-90deg) translateZ(100px); 
+  background-color: #FF5B00;
+}
+
+.six { 
+  transform: rotateX(-90deg) translateZ(100px); 
+  background-color: #FEEB51;
+} */
+/* 
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.cube {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateY(0deg);
+  transition: transform 0.1s;
+}
+
+.cube div {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.one { transform: rotateY(0deg) translateZ(100px); }
+.two { transform: rotateY(90deg) translateZ(100px); }
+.three { transform: rotateY(180deg) translateZ(100px); }
+.four { transform: rotateY(-90deg) translateZ(100px); }
+.five { transform: rotateX(90deg) translateZ(100px); }
+.six { transform: rotateX(-90deg) translateZ(100px); } */
+
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index:999;
+  display: flex;
+  justify-content: center;
+  align-items : center;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.cube {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateY(0deg);
+  transition: transform 0.1s;
+}
+
+.cube img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 2vw;
+  mix-blend-mode:multiply
+}
+
+.cube div {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  /* border: 1px solid #ccc; */
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.one { transform: rotateY(0deg) translateZ(150px); }
+.two { transform: rotateY(90deg) translateZ(150px); }
+.three { transform: rotateY(180deg) translateZ(150px); }
+.four { transform: rotateY(-90deg) translateZ(150px); }
+.five { transform: rotateX(90deg) translateZ(150px); }
+.six { transform: rotateX(-90deg) translateZ(150px); }
+
+#cursor-none {cursor:none}

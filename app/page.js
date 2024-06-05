@@ -1,6 +1,9 @@
+import Cube from "./cube.js";
 import { connectDB } from "./util/database.js";
 import { getServerSession } from "next-auth";
+
 import { authOptions } from "../pages/api/auth/[...nextauth].js";
+
 
 export const revaildate = 60; // 페이지 단위 캐싱 예약 변수
 
@@ -19,25 +22,43 @@ export default async function Home() {
   const db = client.db("forum");
   let result = await db.collection("post").find().toArray();
 
-  return (
-    <div className="inner">
-      <div className="main-visual">
-        <div className="main-bg">
-          {/* <img src="/main-visual.png"></img> */}
+
+         {/* <div className="main-bg">
           <img src="/main-visual-2.png"></img>
-        </div>
-        <div className="main-visual-txt">
+        </div> */}
+        {/* <div className="main-visual-txt">
           <p>WIDELY</p>
           <h2>READING</h2>
-        </div>
-        <div className="main-subtxt">
+        </div> */}
+        {/* <div className="main-subtxt">
           <p>KOREA NO.1</p>
           <p>ARTICLE NEWSLETTER</p>
-        </div>
-        <div className="main-subtxt2">
+        </div> */}
+        {/* <div className="main-subtxt2">
           <p>* brocolli</p>
           <p>세상을 바라보는 눈을 브로콜리하다.</p>
+        </div> */}
+        {/* cube */}
+
+
+  return (
+
+    // 현재 하려는 것 , main-visual 안에서만 cursor-none 처리하기
+    <div className="inner">
+      <div className="main-visual" id="cursor-none">
+         <div className="main-visual-txt">
+          <p>FIRST NEXTJS</p>
+          <h2>PROJECT</h2>
+        </div> 
+         <div className="main-subtxt">
+          <p>2024.06</p>
+          <p>copyright@deserved</p>
+        </div> 
+         <div className="main-subtxt2">
+          <p>* MONGO DB CONNECTED</p>
+          <p>-- database from</p>
         </div>
+        <Cube></Cube>
       </div>
 
       <div className="main-btm">
@@ -50,7 +71,7 @@ export default async function Home() {
             <p className="top-3-index">{i + 1}</p>
             <h4 className="top-3-tit">{item.title}</h4>
             <div className="top-3-right">
-              <p>{item.content}</p>
+              {/* <p>{item.content}</p> */}
               <p>{item.author}</p>
             </div>
           </div>

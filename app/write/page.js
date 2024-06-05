@@ -27,7 +27,7 @@ export default async function Write() {
       ) : (
         <div className="please-login">
           <div className="404-login" style={{width:"300px", height: "300px"}}>
-            <img src="/404-login.png" style={{width: "100%", height: "100%", objectFit: "cover"}}></img>
+            <img src="/security-black.png" style={{width: "100%", height: "100%", objectFit: "cover"}}></img>
           </div>
           <h4 style={{fontSize:"20px", marginBottom:"12px"}}>글을 쓰려면 로그인 해주세요</h4>
           <p>Please log in to write a post</p>
