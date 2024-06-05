@@ -23,23 +23,6 @@ export default async function Home() {
   let result = await db.collection("post").find().toArray();
 
 
-         {/* <div className="main-bg">
-          <img src="/main-visual-2.png"></img>
-        </div> */}
-        {/* <div className="main-visual-txt">
-          <p>WIDELY</p>
-          <h2>READING</h2>
-        </div> */}
-        {/* <div className="main-subtxt">
-          <p>KOREA NO.1</p>
-          <p>ARTICLE NEWSLETTER</p>
-        </div> */}
-        {/* <div className="main-subtxt2">
-          <p>* brocolli</p>
-          <p>세상을 바라보는 눈을 브로콜리하다.</p>
-        </div> */}
-        {/* cube */}
-
 
   return (
 
@@ -61,22 +44,8 @@ export default async function Home() {
         <Cube></Cube>
       </div>
 
-      <div className="main-btm">
-        <div className="user-hello">
-          <p style={{ color: "gray" }}>{currentDate}</p>
-          <h2>TODAY TOP 3 TOPIC</h2>
-        </div>
-        {result.slice(0, 3).map((item, i) => (
-          <div className="top-3-list" key={i}>
-            <p className="top-3-index">{i + 1}</p>
-            <h4 className="top-3-tit">{item.title}</h4>
-            <div className="top-3-right">
-              {/* <p>{item.content}</p> */}
-              <p>{item.author}</p>
-            </div>
-          </div>
-        ))}
-      </div>
+
+
     </div>
   );
 }

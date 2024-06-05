@@ -44,8 +44,8 @@ export default async function RootLayout({ children }) {
                   <LogoutBtn></LogoutBtn>
                 </div>
               ) : (
-                <p>
-                  안녕하세요 좋은 하루입니다! 로그인하세요!
+                <p className="flex">
+                  <Link href="/register" className="signup">SIGN UP</Link>
                   <LoginBtn></LoginBtn>
                 </p>
               )}

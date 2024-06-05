@@ -16,6 +16,29 @@ export default function ListItem({ result }) {
         <h2>Article</h2>
         <p>좋아요를 누르고 댓글을 작성해보세요! 게시자에게 큰 힘이됩니다 :)</p>
       </div>
+
+      <div className="main-btm">
+        <div className="user-hello">
+          <p style={{ color: "gray" }}>{currentDate}</p>
+          <h2>TODAY TOP 3 TOPIC</h2>
+        </div>
+
+        <div className="top-3-wrapper">
+        {result.slice(0, 3).map((item, i) => (
+          <div className="top-3-list" key={i}>
+            <img src="/white-wall-textures.jpg"></img>
+            <p className="top-3-index">{i + 1}</p>
+            <h4 className="top-3-tit">{item.title}</h4>
+            <div className="top-3-right">
+              {/* <p>{item.content}</p> */}
+              <p>{item.author}</p>
+            </div>
+          </div>
+          
+        ))}
+        </div>
+      </div>
+
       {result.map((item, i) => (
         <div className="list-item" id="list-flex" key={i}>
           <div>

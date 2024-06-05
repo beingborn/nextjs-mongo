@@ -9,14 +9,14 @@ export default function Cube() {
   const innerVh = window.innerHeight;
 
 
-    const handleMouseMove = (event) => {
-      const cube = document.querySelector('.cube');
-      const x = event.clientX / window.innerWidth * 2 - 1;
-      const y = event.clientY / window.innerHeight * 2 - 1;
-      const rotateX = y * 180;
-      const rotateY = x * 180;
-      cube.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-    };
+  const handleMouseMove = (event) => {
+    const cube = document.querySelector('.cube');
+    const x = event.clientX / window.innerWidth * 2 - 1;
+    const y = event.clientY / window.innerHeight * 2 - 1;
+    const rotateX = y * 180;
+    const rotateY = x * 180;
+    cube.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+  };
 
     const mouseCursor = (e) => {
 
@@ -26,9 +26,7 @@ export default function Cube() {
       circle.style.left = mouseX + 'px';
       circle.style.top = mouseY + 'px';
 
-      if (innerVh < mouseY) {
-        circle.style.display = "none"
-      }
+  
 
     }
 

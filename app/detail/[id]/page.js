@@ -10,9 +10,16 @@ export default async function Detail(props) {
 
   return (
     <div className="detail-wrap">
-      <h4>상세페이지임</h4>
-      <h4>{result.title}</h4>
-      <p>{result.content}</p>
+      <div className="detail-title">
+        <h4>{result.title}</h4>
+        <span style={{fontSize: "14px"}}>{result.author}</span>
+
+      </div>
+      
+      
+      <p className="detail-sub">{result.content}</p>
+
+
     </div>
   );
 }
