@@ -45,7 +45,7 @@ export default async function RootLayout({ children }) {
                 </div>
               ) : (
                 <p className="flex">
-                  <Link href="/register" className="signup">SIGN UP</Link>
+                  <Link href="/register" className="signup">sign up</Link>
                   <LoginBtn></LoginBtn>
                 </p>
               )}
