@@ -2,16 +2,13 @@ import NextAuth from "next-auth";
 import { MongoDBAdapter } from "@auth/mongodb-adapter";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { connectDB } from "@/app/util/database";
-// import GithubProvider from "next-auth/providers/github";
 import GoogleProvider from "next-auth/providers/google";
 
 export const authOptions = {
   providers: [
     GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      redirect_uri:
-        "https://nextmongo-env.eba-bxvfwuyp.eu-north-1.elasticbeanstalk.com/api/auth/callback/google", // 이걸 꼭 넣어줘야하는 구나
+      clientId: process.env.GOOGLE_CLIENT_ID || "",
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET || "",
     }),
 
     CredentialsProvider({
